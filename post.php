@@ -11,7 +11,7 @@ include("net/config.php");
 $insert = $db->prepare('INSERT INTO postmethod (`c1`, `c2`, `c3`) VALUES (:c1,:c2,:c3)');
 $insert->execute([ ':c1' => $content1, ':c2' => $content2, ':c3' => $content3 ]);
 
-if($insert && $_POST) {
+if($insert && isset($_POST["c1"]) && isset($_POST["c2"]) && isset($_POST["c3"])) {
   echo "1";
 } else {
 
@@ -96,7 +96,7 @@ $dataPrepare->execute([':id' => $maxID]);
      ?>
   </table>
   <footer>
-    2022© YH-IoT Public Database
+    © 2022 YH-IoT Public Database
   </footer>
   </body>
 </html>
