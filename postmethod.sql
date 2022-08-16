@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 26, 2022 at 01:08 AM
+-- Generation Time: Aug 16, 2022 at 11:46 PM
 -- Server version: 5.7.38-cll-lve
 -- PHP Version: 7.4.30
 
@@ -25,6 +25,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `getmethod`
+--
+
+CREATE TABLE `getmethod` (
+  `id` int(11) NOT NULL,
+  `c1` varchar(50) NOT NULL,
+  `c2` varchar(50) NOT NULL,
+  `c3` varchar(50) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `postmethod`
 --
 
@@ -41,6 +55,12 @@ CREATE TABLE `postmethod` (
 --
 
 --
+-- Indexes for table `getmethod`
+--
+ALTER TABLE `getmethod`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `postmethod`
 --
 ALTER TABLE `postmethod`
@@ -49,6 +69,12 @@ ALTER TABLE `postmethod`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `getmethod`
+--
+ALTER TABLE `getmethod`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT for table `postmethod`
